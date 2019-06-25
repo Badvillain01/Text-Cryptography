@@ -1,0 +1,21 @@
+{
+  "name": "text-cryptography",
+  "version": "1.0.0",
+  "description": "Encrypt and Decrypt text using classical ciphers.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "prepublish": "npm test"
+  },
+  "keywords": [
+    "Encrypt",
+    "Decrypt",
+    "Ciphers",
+    "Secure Ciphers"
+  ],
+  "author": "Badvillain",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
