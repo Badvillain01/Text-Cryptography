@@ -1,8 +1,13 @@
 # Text Cryptography
 Encrypt and Decrypt text using classical ciphers. 
 ## Install
+npm 
 ```
 npm i text-cryptography
+```
+yarn
+```
+yarn add text-cryptography
 ```
 
 ## Table of Contents

@@ -1,6 +1,6 @@
 {
   "name": "text-cryptography",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Encrypt and Decrypt text using classical ciphers.",
   "main": "src/index.js",
   "scripts": {
@@ -11,11 +11,18 @@
     "Encrypt",
     "Decrypt",
     "Ciphers",
-    "Secure Ciphers"
+    "Secure Ciphers",
+    "Classical Ciphers"
   ],
   "author": "Badvillain",
   "license": "MIT",
   "devDependencies": {
     "jest": "^24.8.0"
+  },
+  "homepage": "https://github.com/Badvillain01/Text-Cryptography",
+  "bugs": "https://github.com/Badvillain01/Text-Cryptography/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Badvillain01/Text-Cryptography.git"
   }
 }
