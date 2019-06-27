@@ -12,7 +12,14 @@
     "Decrypt",
     "Ciphers",
     "Secure Ciphers",
-    "Classical Ciphers"
+    "Classical Ciphers",
+    "Atbash",
+    "Affine",
+    "Caesar",
+    "Rail Fence",
+    "Vigenere",
+    "Rot",
+    "Crypto"
   ],
   "author": "Badvillain",
   "license": "MIT",
