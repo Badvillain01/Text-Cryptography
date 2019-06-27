@@ -6,7 +6,7 @@ const affine = new index.Affine();
 const atbash = new index.Atbash();
 const baconian = new index.Baconian();
 const caesar = new index.Caesar();
-const latinAlphabet = new index.LatinAlphabet();
+const latinAlphabet = new index.LatinAlphabet(true);
 const railFence = new index.RailFence(5);
 const reverse = new index.Reverse();
 const rot13 = new index.Rot13();
@@ -16,6 +16,10 @@ const rot47 = new index.Rot47();
 const vigenere = new index.Vigenere("hello");
 const mixAlphabet = new index.MixedAlphabet("hello");
 const polybiusSquare = new index.PolybiusSquare("hello");
+const homophonic = new index.Homophonic("keyword69");
+const a1z26 = new index.A1Z26();
+const goldBug = new index.GoldBug();
+const primeNum = new index.PrimeNumbers();
 
 
 // plain text
@@ -64,6 +68,20 @@ let mixAlphabetDecrypt = mixAlphabet.decrypt(mixAlphabetEncrypt);
 let polybiusSquareEncrypt = polybiusSquare.encrypt(text);
 let polybiusSquareDecrypt = polybiusSquare.decrypt(polybiusSquareEncrypt); 
 
+let homophonicEncrypt = homophonic.encrypt(text);
+let homophonicDecrypt = homophonic.decrypt(homophonicEncrypt);
+
+let a1z26Encrypt = a1z26.encrypt(text);
+let a1z26Decrypt = a1z26.decrypt(a1z26Encrypt);
+
+let goldBugEncrypt = goldBug.encrypt(text);
+let goldBugDecrypt = goldBug.decrypt(goldBugEncrypt);
+
+let primeNumEncrypt = primeNum.encrypt(text);
+let primeNumDecrypt = primeNum.decrypt(primeNumEncrypt);
+
+
+// test
 
 // Affine
 test("AFFINE:- Encrypt", () => {
@@ -201,4 +219,40 @@ test("POLYBIUSSQUARE:- Encrypt", () => {
 
 test("POLYBIUSSQUARE:- Decrypt", () => {
   expect(polybiusSquareDecrypt).toBe("THE THINGS I DO FOR LOVE . — IAIME LANNISTER - - SEASON 1 EPISODE 1 ");
+})
+
+// Homophonic
+// test("HOMOPHONIC:- Encrypt", () => {
+//   expect(homophonicEncrypt).toBe("N6O N69Z8M 9 WH 1HL CHQO. —AK9FO CKGX9MNOL --MOKMHG  O29MHWO ");
+// })
+
+test("HOMOPHONIC:- Decrypt", () => {
+  expect(homophonicDecrypt).toBe("THE THINGS I DO FOR LOVE. —JAIME LANNISTER --SEASON  EPISODE ");
+})
+
+// A1Z26
+test("A1Z26:- Encrypt", () => {
+  expect(a1z26Encrypt).toBe("20-8-5 -- 20-8-9-14-7-19 -- 9 -- 4-15 -- 6-15-18 -- 12-15-22-5- -- —10-1-9-13-5 -- 12-1-14-14-9-19-20-5-18 -- --19-5-1-19-15-14 -- -- 5-16-9-19-15-4-5 -- ");
+})
+
+test("A1Z26:- Decrypt", () => {
+  expect(a1z26Decrypt).toBe("THE THINGS I DO FOR LOVE —10AIME LANNISTER  SEASON  EPISODE  ");
+})
+
+// GoldBug
+test("GOLDBUG:- Encrypt", () => {
+  expect(goldBugEncrypt).toBe(";48 ;46*3) 6 †‡ 1‡( 0‡¶8 ,5698 05**6);8( )85)‡*  8.6)‡†8 ");
+})
+
+test("GOLDBUG:- Decrypt", () => {
+  expect(goldBugDecrypt).toBe("THE THINGS I DO FOR LOVE JAIME LANNISTER SEASON  EPISODE ");
+})
+
+// PrimeNumbers
+test("PRIMENUMBERS:- Encrypt", () => {
+  expect(primeNumEncrypt).toBe("71-19-11 -- 71-19-23-43-17-67 -- 23 -- 7-47 -- 13-47-61 -- 37-47-79-11- -- —29-2-23-41-11 -- 37-2-43-43-23-67-71-11-61 -- --67-11-2-67-47-43 -- -- 11-53-23-67-47-7-11 -- ");
+})
+
+test("PRIMENUMBERS:- Decrypt", () => {
+  expect(primeNumDecrypt).toBe("THE THINGS I DO FOR LOVE —29AIME LANNISTER  SEASON  EPISODE  ");
 })

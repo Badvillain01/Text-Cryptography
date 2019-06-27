@@ -12,6 +12,10 @@ const Rot47 = require("./text-cryptography/rot47");
 const Vigenere = require("./text-cryptography/vigenere");
 const MixedAlphabet = require("./text-cryptography/mixedAlphabet");
 const PolybiusSquare = require("./text-cryptography/polybiusSquare");
+const Homophonic = require("./text-cryptography/homophonic");
+const PrimeNumbers = require("./text-cryptography/primeNumbers");
+const A1Z26 = require("./text-cryptography/a1z26");
+const GoldBug = require("./text-cryptography/goldBug");
 
 
 module.exports = {
@@ -28,6 +32,10 @@ module.exports = {
   Rot47: Rot47,
   Vigenere: Vigenere,
   MixedAlphabet: MixedAlphabet,
-  PolybiusSquare: PolybiusSquare
+  PolybiusSquare: PolybiusSquare,
+  Homophonic: Homophonic,
+  PrimeNumbers: PrimeNumbers,
+  A1Z26: A1Z26,
+  GoldBug: GoldBug
 }
 

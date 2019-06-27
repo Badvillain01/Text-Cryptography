@@ -91,10 +91,14 @@ Array.prototype.toDict = function (array2) {
 
 
 // object dictionary prototype
-Object.prototype.swapDict = function () {
-  let dict = {};
+Object.prototype.swapDict = function(){
+  let dict = {}
   Object.keys(this).forEach((k) => {
-    dict[this[k]] = k;
+    let v = this[k]
+    if(Array.isArray(v)){
+      v = v.join("")
+    }
+    dict[v] = k;
   });
   return dict
 }

@@ -9,7 +9,7 @@ const cipherDict = letters.toDict(numbers)
 
 
 class LatinAlphabet {
-  constructor(removeSpace = true) {
+  constructor(removeSpace = false) {
     this.cipherDict = cipherDict;
     this.removeSpace = removeSpace
   }
